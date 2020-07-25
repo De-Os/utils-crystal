@@ -11,6 +11,10 @@ module Utils
   end
 
   def self.money(money)
-    return money.to_i.format(',', '.')
+    if money.is_a?(Number)
+      return money.to_i.format(',', '.')
+    else
+      return money
+    end
   end
 end
